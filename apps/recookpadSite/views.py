@@ -4,6 +4,10 @@ from flask import Blueprint, render_template
 #作業中
 #福永 = なし
 #井上 = なし
+
+#メモ
+#git pull origin main
+#git push origin main
 #--------------------------#
 
 recookpadSite = Blueprint(
