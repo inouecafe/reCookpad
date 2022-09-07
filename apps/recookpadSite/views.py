@@ -1,5 +1,11 @@
 from flask import Blueprint, render_template
 
+#--------------------------#
+#作業中
+#福永 = なし
+#井上 = なし
+#--------------------------#
+
 recookpadSite = Blueprint(
     "recookpadSite",
     __name__,
