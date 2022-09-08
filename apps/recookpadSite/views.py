@@ -1,4 +1,5 @@
 from flask import Blueprint, render_template
+from apps.recookpadSite.forms import TestForm
 
 #--------------------------#
 #作業中
@@ -51,3 +52,32 @@ def show():
 @recookpadSite.route('/mypage')
 def mypage():
     return render_template("mypage.html")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@recookpadSite.route('/test', methods=["POST","GET"])
+def test():
+    testForm = TestForm()
+    message = ''
+
+    if testForm.is_submitted():
+        message = testForm.test.data or ''
+
+    print(message)
+    data = {
+        "form": testForm,
+        "text": message
+    }
+    return render_template("test.html",data=data)

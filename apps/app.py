@@ -5,7 +5,7 @@ csrf = CSRFProtect()
 
 def create_app():
     app = Flask(__name__)
-    app.config.from.mapping(
+    app.config.from_mapping(
         SECRET_KEY="AKJNAJKAKJSFJMF<JFI"
     )
     csrf.init_app(app)
