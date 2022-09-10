@@ -1,5 +1,7 @@
 from flask import Blueprint, render_template
 from apps.recookpadSite.forms import TestForm
+from apps.recookpadSite.models import Test
+from apps.app import db
 
 #--------------------------#
 #作業中
@@ -74,6 +76,12 @@ def test():
 
     if testForm.is_submitted():
         message = testForm.test.data or ''
+        if message != '':
+            test = Test(text=message)
+            db.session.add(test)
+            db.session.commit()
+
+
 
     print(message)
     data = {
