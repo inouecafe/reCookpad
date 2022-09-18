@@ -6,7 +6,7 @@ from apps.app import db
 #--------------------------#
 #作業中
 #福永 = なし
-#井上 = なし
+#井上 = 作業中
 
 #メモ
 #git pull origin main
