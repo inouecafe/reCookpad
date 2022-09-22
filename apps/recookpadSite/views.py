@@ -6,7 +6,7 @@ from apps.app import db
 #--------------------------#
 #作業中
 #福永 = なし
-#井上 = 作業中
+#井上 = なし
 
 #メモ
 #git pull origin main
@@ -19,6 +19,12 @@ recookpadSite = Blueprint(
     template_folder="templates",
     static_folder="static",
     static_url_path="static/recookpadSite"
+)
+auth = Blueprint(
+    "auth",
+    __name__,
+    template_folder="templates",
+    static_folder="static"
 )
 
 @recookpadSite.route('/')
@@ -35,7 +41,7 @@ def register():
 
 @recookpadSite.route('/login')
 def login():
-    return render_template("login.html")
+    return render_template("auth/login.html")
 
 
 
