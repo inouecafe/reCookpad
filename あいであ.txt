@@ -22,48 +22,43 @@
 
 
 　
-投稿
-　投稿id
-　投稿した人のユーザーid
-　タイトル
-　投稿内容
-  タグ内容(最大3)
-　画像URL(最低1,最大4)
-  気になる
+投稿 //Data
+　投稿id //message_id
+　投稿した人のユーザーid //message_user_id
+　タイトル //title
+　投稿内容 //message
+  タグ内容(最大3) //tag01 //tag02 //tag03
+　画像URL(最低1,最大4) //media_01 //media_02 //media_03
+  気になる //interested
+  投稿時間 //created_at
 
-タグテーブル(集計用)
-　タグid
-　タグ
-　タグの個数
+タグテーブル(集計用) //Tag
+　タグid //tag_id
+　タグ //tag
+　タグの個数 //tag_sum
 　
-評価テーブル
-　投稿id
-　ユーザーid
-　(味)まずい ----- おいしい
-　(見た目)悪い ----- 良い
-　(後片付け)大変 ----- 簡単
-　(材料費)安い ----- 高い
-  (調理時間)長い ----- 短い　
+評価テーブル //Rate
+　投稿id //message_id
+　ユーザーid //user_id
+　(味)まずい ----- おいしい //tasty
+　(見た目)悪い ----- 良い //appearance
+　(後片付け)大変 ----- 簡単 //cleanup
+　(材料費)高い ----- 安い //material_cost
+  (調理時間)長い ----- 短い //cooking_time
 
-ログイン
-　ユーザーid
-　名前
-　メールアドレス
-　パスワード
+ログイン //User_data
+　ユーザーid //user_id
+　名前 //user_name
+　メールアドレス //mail
+　パスワード //password
 　
-マイページ
-　ユーザーid
-　プロフィール画像URL
-　自己紹介文(最大140)
-　(集計したもの)
-　　(味)まずい ----- おいしい
-　　(見た目)悪い ----- 良い
-　　(後片付け)大変 ----- 簡単
-　　(材料費)安い ----- 高い
-  　(調理時間)長い ----- 短い
+マイページ //Mypage
+　ユーザーid //user_id
+　プロフィール画像URL //profile_picture
+　自己紹介文(最大140) //self_introduction
 　
-コメントテーブル
-　コメントid
-　投稿id
-　返信したユーザーid
-　内容
+コメントテーブル //Reply
+　コメントid //reply_id
+　投稿id //message_id
+　返信したユーザーid //user_id
+　内容 //reply
