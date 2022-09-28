@@ -21,4 +21,9 @@ def create_app():
     Migrate(app, db)
     from apps.recookpadSite import views
     app.register_blueprint(views.recookpadSite, url_prefix="/")
+
+    # ログイン機能
+    from app.auth import views as auth_views
+    app.register_blueprint(auth_views.auth, url_prefix="/login")
+    
     return app
